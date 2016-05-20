@@ -16,6 +16,25 @@
         <link rel="stylesheet" href="css/main-1.6.css">
     </head>
     <body style="background-color: lightblue">
+        <div id="fb-root"></div>
+        <script>
+            window.fbAsyncInit = function() {
+                FB.init({
+                    appId      : '1069309613143873',
+                    xfbml      : true,
+                    version    : 'v2.6'
+                });
+            };
+
+            (function(d, s, id){
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) {return;}
+                js = d.createElement(s); js.id = id;
+                js.src = "//connect.facebook.net/en_US/sdk.js";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+        </script>
+
         <div id="bg-image">
             <img src="img/bg.jpg" alt="bg" />
         </div>
@@ -51,9 +70,10 @@
                         <!-- Collect the nav links, forms, and other content for toggling -->
                         <div class="collapse navbar-collapse navbar-ex1-collapse">
                             <ul class="nav navbar-nav">
-                                <li><a href="#tab1" role="tab" data-toggle="tab">Home</a></li>
-                                <li><a href="#tab2" data-toggle="tab">Akad & Resepsi</a></li>
-                                <li><a href="#tab3" data-toggle="tab">Lokasi</a></li>
+                                <li><a href="#home" role="tab" data-toggle="tab">Home</a></li>
+                                <li><a href="#akad" data-toggle="tab">Akad & Resepsi</a></li>
+                                <li><a href="#lokasi" data-toggle="tab">Lokasi</a></li>
+                                <li><a href="#guest">Buku Tamu</a></li>
                             </ul>
                         </div><!-- /.navbar-collapse -->
                     </nav>
@@ -62,22 +82,32 @@
             <div class="row">
                 <div class="col-md-offset-1 col-md-10">
                     <div class="tab-content">
-                        <div class="active tab-pane fade in" id="tab1">
+                        <div class="active tab-pane fade in" id="home">
                             <div class="panel panel-default">
                             	<div class="panel-body" style="height: 400px    ">
                             	   Panel body ...
                             	</div>
                             </div>
                         </div>
-                        <div class="tab-pane fade" id="tab2">
-                            <h2>Tab2</h2>
-                            <p>Lorem ipsum.</p>
+                        <div class="tab-pane fade" id="akad">
+                            <div class="panel panel-default">
+                                <div class="panel-body" style="height: 400px    ">
+                                    Panel body ...
+                                </div>
+                            </div>
                         </div>
-                        <div class="tab-pane fade" id="tab3">
+                        <div class="tab-pane fade" id="lokasi">
                             <div class="panel panel-default">
                             	<div class="panel-body">
                                     <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1JzL6rKRiK2N0yiCLfD5sLnOiqAY" width="100%" height="340px"></iframe>
                             	</div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="guest">
+                            <div class="panel panel-default">
+                                <div class="panel-body">
+                                    <div class="fb-comments" data-href="https://www.facebook.com/events/576519625851273/" data-numposts="10" width="100%" height="340px"></div>
+                                </div>
                             </div>
                         </div>
                     </div>
