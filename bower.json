@@ -1,0 +1,25 @@
+{
+  "name": "wedding",
+  "homepage": "https://github.com/rizkidoank/responsive-wedding",
+  "description": "Meta | Rizki",
+  "main": "index.html",
+  "authors": [
+    "Rizki"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.3",
+    "bootstrap": "^3.3.6",
+    "animate.css": "^3.5.1",
+    "normalize-css": "normalize.css#^4.1.1",
+    "modernizr": "^3.3.1"
+  }
+}
